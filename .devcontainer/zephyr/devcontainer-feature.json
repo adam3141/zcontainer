@@ -1,0 +1,44 @@
+{
+    "id": "zephyr",
+    "version": "0.0.1",
+    "name": "Zephyr",
+    "description": "Zephyr development container",
+    "keywords": [
+        "RTOS",
+        "Embedded",
+        "Zephyr"
+    ],
+    "options": {
+        "sdkVersion": {
+            "type": "string",
+            "description": "Installed Zephyr SDK version",
+            "enum": [
+                "0.16.8",
+                "0.15.2",
+                "0.14.2"
+            ],
+            "default": "0.16.8"
+        },
+        "sdkInstallHostTools": {
+            "type": "boolean",
+            "description": "Installation of host tools",
+            "default": false
+        },
+        "sdkToolchains" : {
+            "type": "string",
+            "description": "Comma separated list of toolchains",
+            "default": "arm-zephyr-eabi,x86_64-zephyr-elf"
+        },
+        "zephyrVersion": {
+            "type": "string",
+            "description": "The version of Zephyr RTOS to get",
+            "proposals": [
+                "3.7.0",
+                "2.7.0"           
+            ]
+        }
+    },
+    "dependsOn": {
+        "common-utils": {}
+    }
+}
