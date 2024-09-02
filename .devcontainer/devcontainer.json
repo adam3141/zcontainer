@@ -1,3 +1,15 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04"
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+    "features": {
+        "./zephyr": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "trond-snekvik.devicetree",
+                "trond-snekvik.kconfig-lang",
+                "ms-vscode.cpptools"
+            ]
+        }
+    }
 }
